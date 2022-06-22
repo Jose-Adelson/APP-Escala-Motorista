@@ -1,0 +1,52 @@
+<HomePage>:
+    FloatLayout:
+        Image:
+            pos_hint: {"right":0.85, "top":0.85}
+            size_hint: 0.7, 0.2
+            source:"icones/logonext.png"
+
+        Label:
+            text: "ESCALA DE OPERADORES NEXT"
+            bold: True
+            markup: True
+            pos_hint: {"right":0.8, "top": 0.60}
+            size_hint: 0.60, 0.10
+
+        TextInput:
+            id: email
+            hint_text: "Digite seu email..."
+            pos_hint: {"right":0.9, "top": 0.50}
+            size_hint: 0.8, 0.05
+
+        TextInput:
+            id: senha
+            password: True
+            hint_text: "Digite sua senha..."
+            pos_hint: {"right":0.9, "top": 0.43}
+            size_hint: 0.8, 0.05
+
+
+
+
+
+    FloatLayout:
+
+        ImageButton:
+            pos_hint: {"right":0.80, "top": 0.25}
+            size_hint: 0.6, 0.1
+            source: "icones/b_criarconta.png" if self.state == "normal" else "icones/b_criarconta2.png"
+            on_release: app.mudar_tela("criarcontapage")
+
+        ImageButton:
+            pos_hint: {"right":0.80, "top": 0.37}
+            size_hint: 0.6, 0.1
+            source: "icones/b_login.png" if self.state == "normal" else "icones/b_login2.png"
+            on_release: app.firebase.fazer_login(email.text, senha.text)
+
+        Label:
+            id: mensagem_login
+            text:"OU CRIE UMA CONTA"
+            bold: True
+            font_size: '10dp'
+            pos_hint: {"right":0.7, "top": 0.36}
+            size_hint: 0.4, 0.2

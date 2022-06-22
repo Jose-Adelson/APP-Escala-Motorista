@@ -1,0 +1,72 @@
+<NotificacoesPage>:
+    FloatLayout:
+        canvas:
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "icones/fundo.jpg"
+
+        #BARRA INFERIOR
+
+    FloatLayout:
+        pos_hint: {"right":1, "top": 0.10}
+        size_hint: 1, 0.10
+        canvas.before:
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "icones/barrainfo.png"
+        Image:
+            pos_hint: {"right":0.85, "top":0.75}
+            size_hint: 0.7, 0.55
+            source:"icones/logonext.png"
+
+        ImageButton:
+            pos_hint: {"right":0.20, "top": 0.80}
+            size_hint: 0.2, 0.7
+            source: "icones/voltar2.png"
+            on_release: app.mudar_tela("telaprincipalpage")
+
+
+        #BARRA SUPERIOR
+
+    FloatLayout:
+        pos_hint: {"right":1, "top": 1}
+        size_hint: 1, 0.20
+        canvas.before:
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "icones/barrasup.png"
+
+
+        Image:
+            pos_hint: {"right":0.997, "top": 0.80}
+            size_hint: 0.765, 0.35
+            source: "icones/barra4.png"
+
+        Label:
+            text:"Nome Completo"
+            pos_hint: {"right":0.718, "top":1}
+            size_hint: 0.2, 0.75
+            id: nomecompleto
+            color: 0,0,0
+
+
+        Label:
+            text:"CIF: 8756"
+            pos_hint: {"right":0.75, "top":0.75}
+            size_hint: 0.2, 0.75
+            id: cif
+
+        Label:
+            text:"CIF: "
+            pos_hint: {"right":0.65, "top":0.75}
+            size_hint: 0.2, 0.75
+
+
+        Image:
+            pos_hint: {"right":0.23, "top":0.90}
+            size_hint: 0.2, 0.75
+            source:"icones/perfil.jpg"
+            id: foto_perfil

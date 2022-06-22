@@ -1,0 +1,192 @@
+<TelaPrincipalPage>:
+    FloatLayout:
+        canvas:
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "icones/fundo.jpg"
+
+
+                        #FORMULÁRIO DA ESCALA
+
+        Image:
+            pos_hint: {"right":0.90, "top": 0.95}
+            size_hint: 0.8, 0.5
+            source: "icones/barra4.png"
+
+
+        Label:
+            text: "Data: 01/04/2022"
+            color: 0,0,0
+            pos_hint: {"right":0.725, "top": 0.95}
+            size_hint: 0.8, 0.5
+            id:linha
+
+        Image:
+            pos_hint: {"right":0.90, "top": 0.85}
+            size_hint: 0.8, 0.5
+            source: "icones/barra4.png"
+
+        Label:
+            text: "   "
+            color: 0,0,0
+            pos_hint: {"right":0.74, "top": 0.85}
+            size_hint: 0.8, 0.5
+            id:linha
+
+        Label:
+            text: "Linha: "
+            color: 0,0,0
+            pos_hint: {"right":0.62, "top": 0.85}
+            size_hint: 0.8, 0.5
+
+
+        Image:
+            pos_hint: {"right":0.90, "top": 0.75}
+            size_hint: 0.8, 0.5
+            source: "icones/barra4.png"
+
+        Label:
+            text: "    "
+            color: 0,0,0
+            pos_hint: {"right":0.78, "top": 0.75}
+            size_hint: 0.8, 0.5
+            id:tabela
+
+        Label:
+            text: "Tabela: "
+            color: 0,0,0
+            pos_hint: {"right":0.63, "top": 0.75}
+            size_hint: 0.8, 0.5
+
+
+        Image:
+            pos_hint: {"right":0.90, "top": 0.65}
+            size_hint: 0.8, 0.5
+            source: "icones/barra4.png"
+
+        Label:
+            text: "          "
+            color: 0,0,0
+            pos_hint: {"right":0.84, "top": 0.65}
+            size_hint: 0.8, 0.5
+            id: local
+
+        Label:
+            text: "Local: "
+            color: 0,0,0
+            pos_hint: {"right":0.62, "top": 0.65}
+            size_hint: 0.8, 0.5
+
+
+        Image:
+            pos_hint: {"right":0.90, "top": 0.55}
+            size_hint: 0.8, 0.5
+            source: "icones/barra4.png"
+
+        Label:
+            text: "  :  "
+            color: 0,0,0
+            pos_hint: {"right":0.76, "top": 0.55}
+            size_hint: 0.8, 0.5
+            id: inicio
+
+        Label:
+            text: "Início: "
+            color: 0,0,0
+            pos_hint: {"right":0.62, "top": 0.55}
+            size_hint: 0.8, 0.5
+
+
+        Image:
+            pos_hint: {"right":0.90, "top": 0.45}
+            size_hint: 0.8, 0.5
+            source: "icones/barra4.png"
+
+        Label:
+            text: "  :  "
+            color: 0,0,0
+            pos_hint: {"right":0.82, "top": 0.45}
+            size_hint: 0.8, 0.5
+            id: termino
+
+        Label:
+            text: "Término: "
+            color: 0,0,0
+            pos_hint: {"right":0.65, "top": 0.45}
+            size_hint: 0.8, 0.5
+
+
+
+            #BARRA INFERIOR
+
+    FloatLayout:
+        pos_hint: {"right":1, "top": 0.10}
+        size_hint: 1, 0.10
+        canvas:
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "icones/barrainfo.png"
+        ImageButton:
+            pos_hint: {"right":0.20, "top": 0.70}
+            size_hint: 0.2, 0.4
+            source: "icones/email.png"
+            on_release: app.mudar_tela("notificacoespage")
+
+        ImageButton:
+            pos_hint: {"right":0.99, "top": 0.80}
+            size_hint: 0.2, 0.55
+            source: "icones/botaoacao.png"
+            on_release: app.mudar_tela("ajustespage")
+
+        Image:
+            pos_hint: {"right":0.85, "top":0.75}
+            size_hint: 0.7, 0.55
+            source:"icones/logonext.png"
+
+
+            #BARRA SUPERIOR
+
+    FloatLayout:
+        pos_hint: {"right":1, "top": 1}
+        size_hint: 1, 0.20
+        canvas.before:
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "icones/barrasup.png"
+
+
+        Image:
+            pos_hint: {"right":0.997, "top": 0.80}
+            size_hint: 0.765, 0.35
+            source: "icones/barra4.png"
+
+        Label:
+            text:"Nome Completo"
+            pos_hint: {"right":0.718, "top":1}
+            size_hint: 0.2, 0.75
+            id: nomecompleto
+            color: 0,0,0
+
+
+        Label:
+            text:"0000"
+            pos_hint: {"right":0.75, "top":0.75}
+            size_hint: 0.2, 0.75
+            id: cif_usuario
+
+        Label:
+            text:"CIF: "
+            pos_hint: {"right":0.65, "top":0.75}
+            size_hint: 0.2, 0.75
+
+
+        Image:
+            pos_hint: {"right":0.23, "top":0.90}
+            size_hint: 0.2, 0.75
+            source:"icones/perfil.jpg"
+            id: foto_perfil
+
+

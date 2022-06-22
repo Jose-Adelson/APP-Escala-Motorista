@@ -1,0 +1,43 @@
+<AjustesPage>:
+    FloatLayout:
+        Image:
+            pos_hint: {"right":0.85, "top":0.95}
+            size_hint: 0.7, 0.2
+            source:"icones/Logoadels3.png"
+
+
+
+
+
+#ALTERAR FOTO DE PERFIL
+        ImageButton:
+            source: "icones/alterarfotodeperfil.png"
+            on_release: app.mudar_tela("alterarfotodeperfilpage")
+            pos_hint: {"right":0.70, "top": 0.75}
+            size_hint: 0.40, 0.20
+#PRIVACIDADE
+        ImageButton:
+            source: "icones/privacidade.png"
+            on_release: app.mudar_tela("privacidadepage")
+            pos_hint: {"right":0.70, "top": 0.60}
+            size_hint: 0.40, 0.20
+
+#NOTIFICAÇÕES
+        ImageButton:
+            source: "icones/notificacoes.png"
+            on_release: app.mudar_tela("notificacoespage")
+            pos_hint: {"right":0.70, "top": 0.45}
+            size_hint: 0.40, 0.20
+
+#SOBRE
+        ImageButton:
+            source: "icones/sobre.png"
+            on_release: app.mudar_tela("sobrepage")
+            pos_hint: {"right":0.70, "top": 0.30}
+            size_hint: 0.40, 0.20
+
+        ImageButton:
+            source: "icones/seta.png"
+            os_hint: {"right":0.2, "top": 0.20}
+            size_hint: 0.10, 0.10
+            on_release: app.mudar_tela("telaprincipalpage")

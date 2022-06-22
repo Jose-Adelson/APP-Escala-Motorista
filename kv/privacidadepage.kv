@@ -1,0 +1,13 @@
+<PrivacidadePage>:
+    FloatLayout:
+        canvas:
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "icones/fundo.jpg"
+        ImageButton:
+            source: "icones/seta.png"
+            os_hint: {"right":0.2, "top": 0.20}
+            size_hint: 0.10, 0.10
+            on_release: app.mudar_tela("ajustespage")
+

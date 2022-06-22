@@ -1,0 +1,78 @@
+<CriarContaPage>:
+    FloatLayout:
+        canvas:
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "icones/fundo.jpg"
+
+        #BARRA INFERIOR
+
+    FloatLayout:
+        pos_hint: {"right":1, "top": 0.10}
+        size_hint: 1, 0.10
+        canvas.before:
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "icones/barrainfo.png"
+        Image:
+            pos_hint: {"right":0.85, "top":0.75}
+            size_hint: 0.7, 0.55
+            source:"icones/logonext.png"
+
+        ImageButton:
+            pos_hint: {"right":0.20, "top": 0.7}
+            size_hint: 0.2, 0.5
+            source: "icones/voltar2.png"
+            on_release: app.mudar_tela("homepage")
+
+
+        #BARRA SUPERIOR
+
+    FloatLayout:
+        pos_hint: {"right":1, "top": 1}
+        size_hint: 1, 0.1
+        canvas.before:
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "icones/barrasup.png"
+
+    FloatLayout:
+        TextInput:
+            id: email
+            hint_text: "Digite seu email..."
+            pos_hint: {"right":0.9, "top": 0.50}
+            size_hint: 0.8, 0.05
+
+        TextInput:
+            id: senha
+            password: True
+            hint_text: "Digite sua senha..."
+            pos_hint: {"right":0.9, "top": 0.43}
+            size_hint: 0.8, 0.05
+
+        TextInput:
+            id: cif
+            hint_text:"Digite seu cif..."
+            pos_hint: {"right":0.9, "top": 0.57}
+            size_hint: 0.8, 0.05
+
+        TextInput:
+            id: nomecompleto
+            hint_text: "Digite seu nome completo..."
+            pos_hint: {"right":0.9, "top": 0.64}
+            size_hint: 0.8, 0.05
+
+    FloatLayout:
+        ImageButton:
+            pos_hint: {"right":0.80, "top": 0.25}
+            size_hint: 0.6, 0.1
+            source: "icones/b_criarconta.png" if self.state == "normal" else "icones/b_criarconta2.png"
+            on_release: app.firebase.criar_conta(email.text, senha.text)
+
+
+
+
+

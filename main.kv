@@ -1,0 +1,48 @@
+#:include kv/homepage.kv
+#:include kv/ajustespage.kv
+#:include kv/sobrepage.kv
+#:include kv/privacidadepage.kv
+#:include kv/alterarfotodeperfilpage.kv
+#:include kv/notificacoespage.kv
+#:include kv/telaprincipalpage.kv
+#:include kv/criarcontapage.kv
+
+#:import utils kivy.utils
+
+
+FloatLayout:
+    canvas:
+        Rectangle:
+            size: self.size
+            pos: self.pos
+            source: "icones/capa3.jpg"
+
+
+    ScreenManager:
+        pos_hint:{"right":1, "top": 1}
+        size_hint: 1, 1
+        id: screen_manager
+        HomePage:
+            name: "homepage"
+            id: homepage
+        AjustesPage:
+            name: "ajustespage"
+            id: ajustespage
+        SobrePage:
+            name: "sobrepage"
+            id: sobrepage
+        PrivacidadePage:
+            name: "privacidadepage"
+            id: privacidadepage
+        AlterarFotoDePerfilPage:
+            name: "alterarfotodeperfilpage"
+            id: alterarfotodeperfilpage
+        NotificacoesPage:
+            name: "notificacoespage"
+            id: notificacoespage
+        TelaPrincipalPage:
+            name: "telaprincipalpage"
+            id: telaprincipalpage
+        CriarContaPage:
+            name: "criarcontapage"
+            id: criarcontapage
